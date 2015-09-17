@@ -1,0 +1,13 @@
+[package]
+name = "comptr"
+version = "0.1.0"
+authors = ["msiglreith <msiglreith@users.noreply.github.com>"]
+license = "MIT"
+
+[lib]
+name = "comptr"
+path = "src/lib.rs"
+crate-type = ["dylib"] # TODO: workaround for msvc rust-lang/rust/#27438
+
+[dependencies]
+winapi = "*"
