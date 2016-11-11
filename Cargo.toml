@@ -7,7 +7,6 @@ license = "MIT"
 [lib]
 name = "comptr"
 path = "src/lib.rs"
-crate-type = ["dylib"] # TODO: workaround for msvc rust-lang/rust/#27438
 
 [dependencies]
-winapi = "*"
+winapi = "0.2"
