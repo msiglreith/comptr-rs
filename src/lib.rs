@@ -3,10 +3,11 @@ extern crate winapi;
 
 use std::fmt;
 use std::ops::{Deref, DerefMut};
+use std::hash::{Hash, Hasher};
 
 use winapi::IUnknown;
 
-// TODO: NonZero?
+#[derive(PartialEq, Eq)]
 pub struct ComPtr<T> {
     pointer: *mut T,
 }
@@ -99,4 +100,8 @@ impl<T> Drop for ComPtr<T> {
     }
 }
 
-// TODO: Send, Sync, From, Into
+impl<T> Hash for ComPtr<T> {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        self.pointer.hash(state)
+    }
+}
