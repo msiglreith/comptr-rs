@@ -1,6 +1,6 @@
 [package]
 name = "comptr"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["msiglreith <msiglreith@users.noreply.github.com>"]
 license = "MIT"
 
