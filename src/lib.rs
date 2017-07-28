@@ -24,7 +24,7 @@ impl<T> ComPtr<T> {
     }
 
     #[inline]
-    pub fn as_mut_ptr(&self) -> *mut T {
+    pub unsafe fn as_mut_ptr(&self) -> *mut T {
         self.pointer
     }
 
